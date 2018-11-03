@@ -21,8 +21,8 @@ server {
   access_log  /var/log/nginx/{{ .APP }}-access.log;
   error_log   /var/log/nginx/{{ .APP }}-error.log;
 
-  ssl_certificate     /home/dokku/tls/server.crt;
-  ssl_certificate_key /home/dokku/tls/server.key;
+  ssl_certificate     /etc/letsencrypt/live/pos.dan-gilbert.uk/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/pos.dan-gilbert.uk/privkey.pem;
 
   keepalive_timeout   70;
   location    / {
